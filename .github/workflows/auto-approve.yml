@@ -4,7 +4,7 @@ name: PR Auto-Approve (Copilot)
 #
 # Generated from templates/pr-auto-approve.yml in SteerSpec/strspc-pr-review
 # (v1.5.0) with only the per-repo values changed: bot-login as a literal,
-# secrets.BOT_TOKEN, the base branch, the workflow_run list, and the Copilot
+# secrets.BOT_GITHUB_TOKEN, the base branch, the workflow_run list, and the Copilot
 # wait. The comments below are inherited from that template and kept
 # deliberately: each documents something that silently broke in production, and
 # a wrong value here produces no error at all, just a PR that is never approved.
@@ -118,7 +118,7 @@ jobs:
           bot-login: cnslr-bt
 
           # Required: PAT for bot-login with `repo` scope so it can post reviews.
-          bot-github-token: ${{ secrets.BOT_TOKEN }}
+          bot-github-token: ${{ secrets.BOT_GITHUB_TOKEN }}
 
           # Optional: base branch(es) PRs must target (default: main). Accepts a
           # comma-separated set, e.g. 'develop,main'. Keep in sync with the
